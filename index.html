@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Azuki</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<div class="desktop-mirror" data-audio="media/intro-music.mp3" data-id="desktop-mirror-a">
+<!--    <img src="images/image.jpg" alt="" class="desktop-mirror__img">-->
+
+    <div class="preview">
+        <ul class="preview__list">
+            <li class="preview__item">
+                <h2>WELCOME TO THE ALLEY</h2>
+                <p>The mystical red bean.</p>
+                <p>Few have ever seen it, fewer have ever taken one.</p>
+                <p>Are you ready to take the red bean?</p>
+            </li>
+            <li class="preview__item hidden">
+                <h2>THROUGH THE GATE</h2>
+                <p>The mystical red bean.</p>
+                <p>Few have ever seen it, fewer have ever taken one.</p>
+                <p>Are you ready to take the red bean?</p>
+            </li>
+            <li class="preview__item hidden">
+                <h2>WELCOME TO THE ALLEY</h2>
+                <p>The mystical red bean.</p>
+                <p>Few have ever seen it, fewer have ever taken one.</p>
+                <p>Are you ready to take the red bean?</p>
+            </li>
+        </ul>
+        <button class="preview__btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill="white" fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="pin-container">
+        <div class="pin" data-audio="media/beep.mp3" style="left: 15%;bottom: 25%;">
+            <div class="pin__dot">
+                <div class="pin__circle"></div>
+                <div class="pin__pulse"></div>
+            </div>
+            <div class="pin__title">
+                There’s a lot of rumors about what’s going on beneath the alley... Some say it looks like your hidden folder on OS...
+                There’s a lot of rumors about what’s going on beneath the alley... Some say it looks like your hidden folder on OS...
+            </div>
+        </div>
+        <div class="pin" data-audio="media/beep.mp3" style="right: 55%;top: 50%;">
+            <div class="pin__dot">
+                <div class="pin__circle"></div>
+                <div class="pin__pulse"></div>
+            </div>
+            <div class="pin__title">
+                There’s a lot of rumors about what’s going on beneath the alley... Some say it looks like your hidden folder on OS...
+            </div>
+        </div>
+        <div class="pin" data-audio="media/beep.mp3" style="left: 5%;bottom: 5%;">
+            <div class="pin__dot">
+                <div class="pin__circle"></div>
+                <div class="pin__pulse"></div>
+            </div>
+            <div class="pin__title">
+                There’s a lot of rumors about what’s going on beneath the alley... Some say it looks like your hidden folder on OS...
+                There’s a lot of rumors about what’s going on beneath the alley... Some say it looks like your hidden folder on OS...
+            </div>
+        </div>
+    </div>
+
+    <div class="desktop-mirror__title">
+        THE ALLEY
+    </div>
+
+    <div class="bottom-nav">
+        <button class="all-pin-hover" data-audio="media/hover-all-pin.wav" data-id="all-pin-hover"><span></span></button>
+        <button class="btn-sound">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-3 h-3"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+        </button>
+    </div>
+
+</div>
+<div class="audio-wrapper"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
