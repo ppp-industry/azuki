@@ -3,15 +3,24 @@ window.addEventListener('DOMContentLoaded', () => {
     const hoverPins = document.querySelector('.all-pin-hover');
 
     const hoverPinsSoundSrc = hoverPins.getAttribute('data-audio');
-    const hoverPinsSoundId = hoverPins.getAttribute('data-id');
     const hoverPinsSound = document.createElement('audio');
 
     hoverPinsSound.src = hoverPinsSoundSrc;
-    hoverPinsSound.id = hoverPinsSoundId;
     document.querySelector('.audio-wrapper').appendChild(hoverPinsSound);
 
     if (pins) {
         pins.forEach(pin => {
+
+            const pinSoundSrc = pin.getAttribute('data-audio');
+            const pinSound = document.createElement('audio');
+
+            pinSound.src = pinSoundSrc;
+            document.querySelector('.audio-wrapper').appendChild(pinSound);
+
+            pin.querySelector('.pin__pulse').addEventListener('click', () => {
+
+                pinSound.play();
+            })
 
             if (parseInt(pin.style.right) < 50) pin.classList.add('pin-r');
             if (parseInt(pin.style.left) < 30) pin.classList.add('pin-l');
@@ -42,17 +51,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const introMusic = document.querySelector('.btn-sound');
     const dataMainAudio = document.querySelector('.desktop-mirror').getAttribute('data-audio');
-    const dataMainAudioId = document.querySelector('.desktop-mirror').getAttribute('data-id');
 
     const audioMain = document.createElement('audio');
 
     audioMain.src = dataMainAudio;
-    audioMain.id = dataMainAudioId;
     // audioMain.autoplay = true;
     audioMain.loop = true;
     document.querySelector('.audio-wrapper').appendChild(audioMain);
 
-    let soundState = false;
+    let soundState = true;
 
     introMusic.addEventListener('click', () => {
 
@@ -81,9 +88,12 @@ window.addEventListener('DOMContentLoaded', () => {
             allTabs = document.querySelectorAll('.preview__item'),
             preview = document.querySelector('.preview');
 
+        let opBg = 0.9;
         let counter = 0;
 
         btn.addEventListener('click', function () {
+
+
             if (counter === allTabs.length - 1) {
                 hide(preview);
             } else {
@@ -95,6 +105,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         function show(elem){
             elem.classList.remove('hidden');
+
+            if (opBg >= 0.7) {
+                preview.style.backgroundColor = `rgba(0, 0, 0, ${opBg -= 0.1})`;
+             }
+
+            console.log(opBg)
+
         }
 
         function hide(elem){

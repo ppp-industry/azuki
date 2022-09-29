@@ -25,8 +25,7 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
-
-    background: url("../images/image.jpg") no-repeat fixed left top;
+    background: url("../images/image.jpg") no-repeat center bottom;
     background-size: cover;
 }
 
@@ -215,10 +214,10 @@ body {
     left: 40px;
 }
 
+
 .preview__item.hidden {
     height: 0;
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
 }
 
@@ -227,12 +226,24 @@ body {
     font-weight: 800;
     font-size: 36px;
     margin-bottom: 8px;
-    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    animation: bottomAnim 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+
 }
 
 .preview__item p {
     line-height: 30px;
     font-size: 18px;
+    opacity: 0;
+    animation: topAnim 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.preview__item.hidden p, .preview__item.hidden h2 {
+    animation: none;
 }
 
 .preview__btn {
@@ -252,4 +263,26 @@ body {
 
 .preview__btn svg {
     width: 100px;
+}
+
+@keyframes bottomAnim {
+    0% {
+        transform: translateY(-15px);
+        /*opacity: 0;*/
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes topAnim {
+    0% {
+        transform: translateY(15px);
+        /*opacity: 0;*/
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
