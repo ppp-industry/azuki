@@ -120,7 +120,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
         }
-    stepSlider ()
+    stepSlider ();
+
+    const swiper = new Swiper('.mobile-mirror__slider', {
+
+        pagination: {
+            el: '.mobile-mirror__pagination',
+            clickable: true
+        },
+
+        on: {
+            slideChange: function () {
+                mobileSlide();
+            },
+        },
+    });
+
+    function mobileSlide() {
+        const index_currentSlide = swiper.realIndex;
+        const currentSlide = swiper.slides[index_currentSlide];
+
+        const images = document.querySelector('.mobile-mirror__img');
+        images.style.backgroundPosition = currentSlide.getAttribute('data-position');
+        images.style.transform = `scale(${currentSlide.getAttribute('data-size')})`;
+    }
+
+    mobileSlide();
+
 })
 
 
