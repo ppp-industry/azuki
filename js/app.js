@@ -110,7 +110,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 preview.style.backgroundColor = `rgba(0, 0, 0, ${opBg -= 0.1})`;
              }
 
-            console.log(opBg)
 
         }
 
@@ -141,8 +140,13 @@ window.addEventListener('DOMContentLoaded', () => {
         const currentSlide = swiper.slides[index_currentSlide];
 
         const images = document.querySelector('.mobile-mirror__img');
-        images.style.backgroundPosition = currentSlide.getAttribute('data-position');
-        images.style.transform = `scale(${currentSlide.getAttribute('data-size')})`;
+
+        if (currentSlide) {
+            images.style.backgroundPosition = currentSlide.getAttribute('data-position');
+            images.style.transform = `scale(${currentSlide.getAttribute('data-size')})`;
+            images.style.transform = `scale(${currentSlide.getAttribute('data-size')})`;
+        }
+
     }
 
     mobileSlide();
