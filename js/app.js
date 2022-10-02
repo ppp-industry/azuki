@@ -11,6 +11,12 @@ window.addEventListener('DOMContentLoaded', () => {
     if (pins) {
         pins.forEach(pin => {
 
+            console.log(pin.getBoundingClientRect().top)
+
+            if (pin.getBoundingClientRect().left > 500) pin.classList.add('pin-r');
+            if (parseInt(pin.style.left) < 30) pin.classList.add('pin-l');
+            if (pin.getBoundingClientRect().top < 100) pin.classList.add('pin-t');
+
             const pinSoundSrc = pin.getAttribute('data-audio');
             const pinSound = document.createElement('audio');
 
@@ -18,13 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.audio-wrapper').appendChild(pinSound);
 
             pin.querySelector('.pin__pulse').addEventListener('click', () => {
-
                 pinSound.play();
             })
-
-            if (parseInt(pin.style.right) < 50) pin.classList.add('pin-r');
-            if (parseInt(pin.style.left) < 30) pin.classList.add('pin-l');
-            if (parseInt(pin.style.top) < 50) pin.classList.add('pin-t');
 
             document.addEventListener('click', function (e) {
 
