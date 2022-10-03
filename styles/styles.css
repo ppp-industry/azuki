@@ -87,16 +87,18 @@ body {
 .desktop-mirror {
     width: 100%;
     height: 100vh;
-    /*background: url("../images/image.jpg") no-repeat;*/
-    /*background-attachment: fixed !important;*/
-    /*background-size: cover;*/
     overflow: hidden;
+    display: block;
+    position: relative;
 }
 
 .img {
-    width: 2560px;
-    min-height: 1600px;
+    /*width: 2575px;*/
+    /*min-height: 1606px;*/
+    /*display: block;*/
     position: absolute;
+    max-width: 100%;
+    height: auto;
 }
 
 .desktop-mirror__img {
@@ -112,12 +114,22 @@ body {
 }
 
 .pin-container {
-    width: 2560px;
-    min-height: 1600px;
-    position: absolute;
+    position: relative;
     overflow: hidden;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container {
+    position: relative;
+    background-color: #000;
+    aspect-ratio: 4000/2490;
+    overflow: hidden;
+    min-width: 100vw;
+    min-height: 100vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .pin__dot {
@@ -438,50 +450,6 @@ body {
 }
 
 /* Adaptive */
-
-@media (max-width: 1920px) {
-
-    .img, .pin-container {
-        width: 2320px;
-        height: 1200px;
-    }
-
-}
-
-@media (max-width: 1680px) {
-
-    .img, .pin-container {
-        width: 2000px;
-        height: 1050px;
-    }
-
-}
-
-@media (max-width: 1440px) {
-
-    .pin-container {
-        left: -200px;
-    }
-
-    .img, .pin-container {
-        width: 2000px;
-        height: 900px;
-    }
-
-}
-
-@media (max-width: 1280px) {
-
-    .pin-container {
-        bottom: -200px;
-    }
-
-    .img, .pin-container {
-        width: 1900px;
-        height: 1000px;
-    }
-
-}
 
 @media (min-width: 1025px) {
     .mobile-mirror {
