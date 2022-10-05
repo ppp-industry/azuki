@@ -429,7 +429,7 @@ body {
 
 /* Adaptive */
 
-@media (min-width: 1245px) {
+@media (min-width: 1246px) {
     .mobile-mirror {
         display: none;
     }
