@@ -4,8 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (pins) {
         pins.forEach(pin => {
 
-            console.log(pin.getBoundingClientRect().top)
-
             if (pin.getBoundingClientRect().left > 500) pin.classList.add('pin-r');
             if (parseInt(pin.style.left) < 30) pin.classList.add('pin-l');
             if (pin.getBoundingClientRect().top < 100) pin.classList.add('pin-t');
