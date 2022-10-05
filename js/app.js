@@ -1,4 +1,16 @@
+const desktop = document.querySelector('.desktop-mirror');
+const mobileItem = document.querySelector('.mobile-mirror');
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    desktop.style.display = 'none';
+    mobileItem.style.display = 'block';
+} else {
+    desktop.style.display = 'block';
+    mobileItem.style.display = 'none';
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+
     const pins = document.querySelectorAll('.pin');
 
     if (pins) {
