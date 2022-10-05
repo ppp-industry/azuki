@@ -1,12 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
     const pins = document.querySelectorAll('.pin');
-    const hoverPins = document.querySelector('.all-pin-hover');
-
-    const hoverPinsSoundSrc = hoverPins.getAttribute('data-audio');
-    const hoverPinsSound = document.createElement('audio');
-
-    hoverPinsSound.src = hoverPinsSoundSrc;
-    document.querySelector('.audio-wrapper').appendChild(hoverPinsSound);
 
     if (pins) {
         pins.forEach(pin => {
@@ -36,16 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             })
 
-            hoverPins.addEventListener('mouseover', () => {
-                pin.querySelector('.pin__dot').classList.add('opacity');
-                hoverPinsSound.play();
-            })
-
-            hoverPins.addEventListener('mouseout', () => {
-                setTimeout(() => {
-                    pin.querySelector('.pin__dot').classList.remove('opacity')
-                }, 4000);
-            })
         });
     }
 
