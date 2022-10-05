@@ -1,7 +1,9 @@
 const desktop = document.querySelector('.desktop-mirror');
 const mobileItem = document.querySelector('.mobile-mirror');
 
-if (navigator.userAgent.toLowerCase().match(/(ipad|iphone)/)) {
+const devices = new RegExp('Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
+
+if (devices.test(navigator.userAgent)) {
     desktop.style.display = 'none';
     mobileItem.style.display = 'block';
 } else {
