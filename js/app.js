@@ -1,15 +1,27 @@
 const desktop = document.querySelector('.desktop-mirror');
 const mobileItem = document.querySelector('.mobile-mirror');
 
-const devices = new RegExp('Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
+// const devices = new RegExp('Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
+//
+// if (devices.test(navigator.userAgent)) {
+//     desktop.style.display = 'none';
+//     mobileItem.style.display = 'block';
+// } else {
+//     desktop.style.display = 'block';
+//     mobileItem.style.display = 'none';
+// }
 
-if (devices.test(navigator.userAgent)) {
+let detect = new MobileDetect(window.navigator.userAgent);
+if (detect.tablet())
+{
     desktop.style.display = 'none';
     mobileItem.style.display = 'block';
 } else {
     desktop.style.display = 'block';
     mobileItem.style.display = 'none';
 }
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
