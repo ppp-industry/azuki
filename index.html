@@ -146,17 +146,43 @@
     const desktop = document.querySelector('.desktop-mirror');
     const mobileItem = document.querySelector('.mobile-mirror');
 
-    const expression = /(iPhone|iPod|iPad|BlackBerry)/i;
+    const expression = /(iPad|iPhone|iPod|BlackBerry)/i;
 
-    console.log(expression.test(navigator.userAgent.toLowerCase()))
 
-    if (expression.test(navigator.userAgent.toLowerCase())) {
+    let is_safari = navigator.userAgent.indexOf('Safari') > -1;
+    let is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    let is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+
+    if ((is_chrome)&&(is_safari)) { is_safari = false; }
+    if ((is_chrome)&&(is_opera)) { is_chrome = false; }
+
+
+    const saf = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+
+    if (saf) {
+        console.log('safari')
+    } else {
+        console.log('chrome')
+    }
+
+    var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
+
+    if (((navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 0) || navigator.platform === 'iPad') && supportsTouch){
         desktop.style.display = 'none';
         mobileItem.style.display = 'block';
+
+        console.log('1')
+    } else if (expression.test(window.navigator.userAgent)) {
+        desktop.style.display = 'none';
+        mobileItem.style.display = 'block';
+        console.log('2')
     } else {
         desktop.style.display = 'block';
         mobileItem.style.display = 'none';
+        console.log('3')
     }
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>

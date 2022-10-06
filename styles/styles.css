@@ -429,13 +429,13 @@ body {
 
 /* Adaptive */
 
-@media (min-width: 1380px) {
+@media (min-width: 1366px) {
     /*.mobile-mirror {*/
     /*    display: none;*/
     /*}*/
 }
 
-@media (max-width: 1379px) {
+@media (max-width: 1365px) {
     /*.desktop-mirror {*/
     /*    display: none;*/
     /*}*/
