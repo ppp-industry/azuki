@@ -3,7 +3,7 @@ const mobileItem = document.querySelector('.mobile-mirror');
 
 const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
 
-if (devices.test(navigator.userAgent)) {
+if (devices.test(navigator.platform)) {
     desktop.style.display = 'none';
     mobileItem.style.display = 'block';
 } else {
