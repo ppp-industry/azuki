@@ -7,10 +7,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const isApple = ['iPhone', 'iPad', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator',].includes(window.navigator.platform)
 
 
-    if (isApple)) {
+    if (isApple) {
         desktop.style.display = 'none';
         mobileItem.style.display = 'block';
-    } else if(devices.test(navigator.userAgent) {
+    } else if(devices.test(navigator.userAgent)) {
         desktop.style.display = 'none';
         mobileItem.style.display = 'block';
     } else {
