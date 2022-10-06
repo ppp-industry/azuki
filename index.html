@@ -142,7 +142,22 @@
 </div>
 <div class="audio-wrapper"></div>
 
+<script>
+    const desktop = document.querySelector('.desktop-mirror');
+    const mobileItem = document.querySelector('.mobile-mirror');
 
+    const expression = /(iPhone|iPod|iPad|BlackBerry)/i;
+
+    console.log(expression.test(navigator.userAgent))
+
+    if (expression.test(navigator.userAgent)) {
+        desktop.style.display = 'none';
+        mobileItem.style.display = 'block';
+    } else {
+        desktop.style.display = 'block';
+        mobileItem.style.display = 'none';
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
 </body>

@@ -1,18 +1,3 @@
-const desktop = document.querySelector('.desktop-mirror');
-const mobileItem = document.querySelector('.mobile-mirror');
-
-const expression = /(iPhone|iPod|iPad|BlackBerry)/i;
-
-console.log(navigator)
-
-if (expression.test(navigator.userAgent)) {
-    desktop.style.display = 'none';
-    mobileItem.style.display = 'block';
-} else {
-    desktop.style.display = 'block';
-    mobileItem.style.display = 'none';
-}
-
 window.addEventListener('DOMContentLoaded', () => {
 
     // const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
