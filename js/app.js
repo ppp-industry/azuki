@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const mobileItem = document.querySelector('.mobile-mirror');
 
     const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
-    const isApple = ['iPhone', 'iPad', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator',].includes(window.navigator.platform)
+    const isApple = ['iPhone', 'iPad', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator',].includes(window.userAgent)
 
 
     if (isApple) {
