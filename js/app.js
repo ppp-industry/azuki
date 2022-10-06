@@ -1,22 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-    // const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
-    // const isApple = ['iPhone', 'iPad', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator',].includes(navigator.platform)
-    //
-    //
-    // if (isApple) {
-    //     desktop.style.display = 'none';
-    //     mobileItem.style.display = 'block';
-    // } else if(devices.test(navigator.userAgent)) {
-    //     desktop.style.display = 'none';
-    //     mobileItem.style.display = 'block';
-    // } else {
-    //     desktop.style.display = 'block';
-    //     mobileItem.style.display = 'none';
-    // }
-
-
-
     const pins = document.querySelectorAll('.pin');
 
     if (pins) {
@@ -142,9 +125,8 @@ window.addEventListener('DOMContentLoaded', () => {
         const images = document.querySelector('.mobile-mirror__img');
 
         if (currentSlide) {
-            images.style.backgroundPosition = currentSlide.getAttribute('data-position');
-            images.style.transform = `scale(${currentSlide.getAttribute('data-size')})`;
-            images.style.transform = `scale(${currentSlide.getAttribute('data-size')})`;
+            images.style.transform = `translate(${currentSlide.getAttribute('data-position')})`;
+            images.style.height = `${currentSlide.getAttribute('data-size')}`;
         }
 
     }
