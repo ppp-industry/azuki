@@ -3,15 +3,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const desktop = document.querySelector('.desktop-mirror');
     const mobileItem = document.querySelector('.mobile-mirror');
 
-    const expression = /(iPhone|iPod|iPad)/i;
+    const expression = /(iPhone|iPod|iPad|BlackBerry)/i;
+
+    document.querySelector('body').innerHTML = navigator.platform;
 
     if (expression.test(navigator.platform)) {
-        desktop.style.display = 'block';
-        mobileItem.style.display = 'none';
+            desktop.style.display = 'none';
+            mobileItem.style.display = 'block';
     } else {
-        desktop.style.display = 'none';
-        mobileItem.style.display = 'block';
-
+            desktop.style.display = 'block';
+            mobileItem.style.display = 'none';
     }
 
     // const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
