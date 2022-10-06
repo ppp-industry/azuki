@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
             desktop.style.display = 'none';
             mobileItem.style.display = 'block';
     } else {
-        console.log('Other device detected!');
+            desktop.style.display = 'block';
+            mobileItem.style.display = 'none';
     }
 
     // const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
