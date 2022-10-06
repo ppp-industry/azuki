@@ -148,9 +148,9 @@
 
     const expression = /(iPhone|iPod|iPad|BlackBerry)/i;
 
-    console.log(expression.test(navigator.userAgent))
+    console.log(expression.test(navigator.userAgent.toLowerCase()))
 
-    if (expression.test(navigator.userAgent)) {
+    if (expression.test(navigator.userAgent.toLowerCase())) {
         desktop.style.display = 'none';
         mobileItem.style.display = 'block';
     } else {
