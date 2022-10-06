@@ -3,16 +3,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const desktop = document.querySelector('.desktop-mirror');
     const mobileItem = document.querySelector('.mobile-mirror');
 
+    const expression = /(iPhone|iPod|iPad)/i;
 
-    function isIOSDevice() {
-        return navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-    }
-    if (isIOSDevice()) {
-        document.querySelector('body').innerHTML = 'Ios'
-        desktop.style.display = 'none';
-        mobileItem.style.display = 'block';
+    if (expression.test(navigator.platform)) {
+            desktop.style.display = 'none';
+            mobileItem.style.display = 'block';
     } else {
-        console.log('false')
+        console.log('Other device detected!');
     }
 
     // const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
