@@ -356,20 +356,6 @@ body {
     position: relative;
 }
 
-/*.mobile-mirror__img {*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    background-size: cover !important;*/
-/*    background-origin: border-box !important;*/
-/*    transition: all 0.5s ease-in;*/
-/*}*/
-
-/*eight: 165vh;*/
-/*transform: translate(-40vh, 0vh);*/
-
 .mobile-mirror__img {
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: 1.5s;
