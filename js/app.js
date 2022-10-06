@@ -5,9 +5,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const expression = /(iPhone|iPod|iPad|BlackBerry)/i;
 
-    document.querySelector('body').innerHTML = navigator.platform;
+    console.log(navigator.userAgent)
 
-    if (expression.test(navigator.platform)) {
+    if (expression.test(navigator.userAgent)) {
             desktop.style.display = 'none';
             mobileItem.style.display = 'block';
     } else {
