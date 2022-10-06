@@ -3,20 +3,34 @@ window.addEventListener('DOMContentLoaded', () => {
     const desktop = document.querySelector('.desktop-mirror');
     const mobileItem = document.querySelector('.mobile-mirror');
 
-    const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
-    const isApple = ['iPhone', 'iPad', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator',].includes(window.userAgent)
 
-
-    if (isApple) {
-        desktop.style.display = 'none';
-        mobileItem.style.display = 'block';
-    } else if(devices.test(navigator.userAgent)) {
+    function isIOSDevice() {
+        return navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+    }
+    if (isIOSDevice()) {
+        document.querySelector('body').innerHTML = 'Ios'
         desktop.style.display = 'none';
         mobileItem.style.display = 'block';
     } else {
-        desktop.style.display = 'block';
-        mobileItem.style.display = 'none';
+        console.log('false')
     }
+
+    // const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
+    // const isApple = ['iPhone', 'iPad', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator',].includes(navigator.platform)
+    //
+    //
+    // if (isApple) {
+    //     desktop.style.display = 'none';
+    //     mobileItem.style.display = 'block';
+    // } else if(devices.test(navigator.userAgent)) {
+    //     desktop.style.display = 'none';
+    //     mobileItem.style.display = 'block';
+    // } else {
+    //     desktop.style.display = 'block';
+    //     mobileItem.style.display = 'none';
+    // }
+
+
 
     const pins = document.querySelectorAll('.pin');
 

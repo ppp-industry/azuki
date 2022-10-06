@@ -430,15 +430,15 @@ body {
 /* Adaptive */
 
 @media (min-width: 1380px) {
-    .mobile-mirror {
-        display: none;
-    }
+    /*.mobile-mirror {*/
+    /*    display: none;*/
+    /*}*/
 }
 
 @media (max-width: 1379px) {
-    .desktop-mirror {
-        display: none;
-    }
+    /*.desktop-mirror {*/
+    /*    display: none;*/
+    /*}*/
 
     .header {
         opacity: 1;
