@@ -6,11 +6,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const expression = /(iPhone|iPod|iPad)/i;
 
     if (expression.test(navigator.platform)) {
-            desktop.style.display = 'none';
-            mobileItem.style.display = 'block';
+        desktop.style.display = 'block';
+        mobileItem.style.display = 'none';
     } else {
-            desktop.style.display = 'block';
-            mobileItem.style.display = 'none';
+        desktop.style.display = 'none';
+        mobileItem.style.display = 'block';
+
     }
 
     // const devices = new RegExp('Android|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini', "i");
