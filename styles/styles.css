@@ -386,19 +386,19 @@ body {
 
 .mobile-mirror__slider .swiper-wrapper {
     align-items: flex-end;
-    width: fit-content;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .mobile-mirror__slider .swiper-slide {
     display: flex;
     align-items: flex-end;
+    height: 100vh;
 }
 
 .mobile-mirror__content {
     height: fit-content;
     padding: 20px 0 40px 20px;
     width: 100%;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -429,26 +429,24 @@ body {
 
 /* Adaptive */
 
-@media (min-width: 1366px) {
-    /*.mobile-mirror {*/
-    /*    display: none;*/
-    /*}*/
-}
-
 @media (max-width: 1365px) {
-    /*.desktop-mirror {*/
-    /*    display: none;*/
-    /*}*/
 
     .header {
         opacity: 1;
     }
 }
 
+
 @media (max-width: 480px) {
     .mobile-mirror__content p {
         font-size: 12px;
     }
+
+    .mobile-mirror__slider h2 {
+        font-size: 17px;
+        line-height: 16px;
+    }
+
 }
 
 /* \Adaptive */
