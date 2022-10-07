@@ -445,4 +445,10 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .mobile-mirror__content p {
+        font-size: 12px;
+    }
+}
+
 /* \Adaptive */
