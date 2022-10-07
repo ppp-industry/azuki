@@ -351,7 +351,8 @@ body {
 
 .mobile-mirror {
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     position: relative;
 }
@@ -366,9 +367,9 @@ body {
 .mobile-mirror__slider {
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     color: #fff;
 }
 
@@ -385,6 +386,8 @@ body {
 
 .mobile-mirror__slider .swiper-wrapper {
     align-items: flex-end;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .mobile-mirror__slider .swiper-slide {
@@ -396,8 +399,8 @@ body {
     height: fit-content;
     padding: 20px 0 40px 20px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 .mobile-mirror__pagination {
     display: flex;
