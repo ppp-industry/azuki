@@ -93,9 +93,6 @@ body {
 }
 
 .img {
-    /*width: 2575px;*/
-    /*min-height: 1606px;*/
-    /*display: block;*/
     position: absolute;
     max-width: 100%;
     height: auto;
@@ -396,7 +393,7 @@ body {
 
 .mobile-mirror__content {
     height: fit-content;
-    padding: 20px 0 40px 20px;
+    padding: 20px 15px 40px 15px;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
 }
